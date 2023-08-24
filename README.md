@@ -49,7 +49,8 @@ The Password Generator uses an algorithm to select a character in the building p
 > * Regular Characters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 >
 > * Special Characters: !#$%&()*+,-./:;<=>?@[\]^_{|} - Some characters have been removed.
->
+> 
+> * Validation process will validate that we have satisfied the selected criteria. In case there is an error then message will be displayed on the site (see error message below).
 
 ## Snapshots
 Here are the complete set of snapshots:
@@ -57,6 +58,9 @@ Here are the complete set of snapshots:
 Prompt User for length           |  Confirm Special Chars
 :-------------------------:|:-------------------------:
 ![](./Assets/img/Image-001.png)  |  ![](./Assets/img/Image-002.png)
+Error Message           
+:-------------------------:
+![](./Assets/img/Image-003.png) 
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. Developed by Gustavo Miller
