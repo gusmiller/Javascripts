@@ -6,7 +6,7 @@ var allowSpecial = false;
 
 // Available characters for password generation
 const regularCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-const spacialCharacters = '!"#$%&()*+,-./:;<=>?@[\]^_`{|}~';
+const specialCharacters = '!#$%&()*+,-./:;<=>?@[\]^_{|}';
 
 // Write password to the #password input
 function writePassword() {
@@ -76,19 +76,27 @@ function confirmSpecialCharacters() {
  */
 function generatePassword(length) {
 
-  let result = '';
-  // Instantiate the available characters to use. It uses a terary conditional to concatenate
-  // the 
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  let result = ''; // Variable that will return the password
 
-  if (allowSpecial) {
-    characters.concat(spacialCharacters);
+  // Instantiate the available characters to use. In this case as default we need the 
+  // alphabet characters.
+  var characters = regularCharacters;
+
+  // Validate user has selected the Special Characters or not. In case true then we 
+  // concatenate the special characters.
+  if (allowSpecial === true) {
+    characters = characters.concat(specialCharacters);
   }
 
-  let counter = 0;
-  while (counter < length) {
+  // We now have the characters that will be involved in the process.
+  console.log(characters);
+
+  let charCounter = 0; // Initialize the counter
+
+  // Perform the algrithm as many times as specified in the length of the password
+  while (charCounter < length) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
-    counter += 1;
+    charCounter += 1;
   }
 
   return result;
