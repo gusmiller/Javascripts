@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://coursereport-production.imgix.net/uploads/school/logo/771/original/carleton-university-boot-camp-logo.png?w=72&h=72" height="250">
+    <img src="./Assets/img/carleton-u-logo.jpg" height="250">
 </p>
 
 <p align="center">
@@ -7,6 +7,8 @@
         <img alt="Carleton University" src="https://img.shields.io/static/v1.svg?label=bootcamp&message=Carleton&color=blue" /></a>
     <a href="" >
         <img alt="JavaScript - Functions" src="https://img.shields.io/static/v1.svg?label=JavaScripts&message=functions&color=red" /></a>
+    <a href="" >
+        <img alt="JavaScript - Functions" src="https://img.shields.io/static/v1.svg?label=JavaScripts&message=arrays&color=yellow" /></a>
     <a href="" >
         <img alt="JavaScript - Prompts" src="https://img.shields.io/static/v1.svg?label=deployment&message=production&color=green" /></a>
 </p>
@@ -25,8 +27,11 @@ The Password Generator should allow user to define some parameters that need to 
 
 <ul>
 <li><strong>Password Size</strong> - User is required to give a length of at least 8 characters and no more than 128 characters.</li>
-<li><strong>Allow Special Characters</strong> - User will confirm whether or not to include lowercase, uppercase, numeric, and/or special characters.</li>
-<li><strong>Validation</strong> - Process will validate password based on criteria selected. Error message will be displayed
+<li><strong>Allow <span style="color:yellow;">Special Characters</span></strong> - User to confirm whether or not to include special characters. Note: these are the special characters: <span style="color:red;">!#$%&()*+,-.:;<=>?@[\]^_{|}</span></li>
+<li><strong>Allow <span style="color:yellow;">Lowercase</span> Characters</strong> - User to confirm whether or not to include lowercase characters.</li>
+<li><strong>Allow <span style="color:yellow;">Uppercase</span> Characters</strong> - User to confirm whether or not to include uppercase characters.</li>
+<li><strong>Allow <span style="color:yellow;">Numeric</span> Characters</strong> - User to confirm whether or not to include numeric characters.</li>
+<li><strong>Validation</strong> - Process will validate password based on criteria selected. Error message will be displayed. This will normally happen when user does not confirms Special Characters.
 <li><strong>Error</strong> - Errors are prompted to the user. First t report the error and second tp ask if another attempt is required.</li>
 </ul>
 
@@ -54,15 +59,10 @@ The Password Generator uses an algorithm to select a character in the building p
 > 
 > * Validation process will validate that we have satisfied the selected criteria. In case there is an error then message will be displayed on the site (see error message below).
 
-## Snapshots
-Here are the complete set of snapshots:
+## Error Handling
+The error handler uses the password text to show error. It changes the style of the textbox to denote the error and display the message. User will be prompted to clear the error message.
 
-Prompt User for length           |  Confirm Special Chars
-:-------------------------:|:-------------------------:
-![](./Assets/img/Image-001.png)  |  ![](./Assets/img/Image-002.png)
-Error Message           
-:-------------------------:
-![](./Assets/img/Image-003.png) 
+<img src="./Assets/img/Image-404.png" height="550">
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved. Developed by Gustavo Miller
