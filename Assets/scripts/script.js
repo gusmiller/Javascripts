@@ -59,7 +59,9 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", function () {
+  writePassword();
+});
 
 /**
  * This method will prompt user for password length. It will return null when 
@@ -199,7 +201,6 @@ function isNumber(n) {
 function displayError(value) {
   passwordText.value = value;
   passwordText.setAttribute("style", "color:red; font-size: 1.5em");
-  displayParameters.setAttribute("hidden", "");
 
   setTimeout(function () {
     alert(value);
@@ -216,6 +217,7 @@ function clearError(e) {
   setTimeout(function () {
     passwordText.value = null;
     passwordText.setAttribute("style", "color:black; font-size: 1.2em");
+    displayParameters.setAttribute("hidden", "");
   }, e);
 }
 
