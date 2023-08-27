@@ -102,7 +102,7 @@ function generatePassword(length) {
 
   // Instantiate the available characters to use. In this case as default we need the 
   // alphabet characters.
-  var characters = regularCharacters;
+  var characters = '';
 
   // Validate user has selected the Special Characters or not. In case true then we 
   // concatenate the special characters.
@@ -134,14 +134,18 @@ function generatePassword(length) {
  * @returns true/false
  */
 function validateContainsSpecial(value) {
-  var regexstring = "whatever";
-  var regexp = new RegExp(regexstring, "gi");
-  var str = "whateverTest";
-  var str2 = str.replace(regexp, "other");
+  var validateString = specialCharacters.split('');
+  var validateSource = value;
 
-  var exp = new RegExp("/{" + specialCharacters + "}$/")
-  var expressionValidate = new RegExp(`ReGeX${specialCharacters}ReGeX`);
-  return value.match(expressionValidate) ? true : false;
+  //To determine how many times the loop should execute, we use the array's length
+  for (var i = 0; i < validateString.length; i++) {
+    validateSource = validateSource.replace(validateString[i], '');
+    if (value.length != validateSource.length) {
+      console.log("Found! " + validateString[i]);
+      return true;
+    }
+  }
+  return false;
 }
 
 /**
@@ -195,24 +199,24 @@ function isNumber(n) {
 function displayError(value) {
   passwordText.value = value;
   passwordText.setAttribute("style", "color:red; font-size: 1.5em");
+  displayParameters.setAttribute("hidden", "");
 
   setTimeout(function () {
     alert(value);
   }, alertDelay);
 
-  clearError() // Clear messages area
+  clearError(alertDelay) // Clear messages area
 }
 
 /**
  * This method will clear the message, it will trigger at .25 seconds, 
  * giving time to DOM reset text and reset the styling.
  */
-function clearError() {
+function clearError(e) {
   setTimeout(function () {
     passwordText.value = null;
     passwordText.setAttribute("style", "color:black; font-size: 1.2em");
-    displayParameters.setAttribute("hidden", "");
-  }, alertDelay);
+  }, e);
 }
 
 /**

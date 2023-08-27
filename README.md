@@ -44,11 +44,13 @@ The Password Generator uses an algorithm to select a character in the building p
 >
 > * Password Length - this is a numeric field.
 >
-> * Allow Special Characters - this is a boolean response.
+> * Allowing Special characters, numeric, upper/lower cases - these are boolean responses.
 >
-> * Regular Characters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+> * Regular Characters: abcdefghijklmnopqrstuvwxyz. Note: for uppercases we use the .ToUpperCase() string method.
 >
-> * Special Characters: !#$%&()*+,-./:;<=>?@[\]^_{|} - Some characters have been removed.
+> * Numeric Characters: 0123456789
+>
+> * Special Characters: !#$%&()*+,-.:;<=>?@[\]^_{|} - Some characters have been removed.
 > 
 > * Validation process will validate that we have satisfied the selected criteria. In case there is an error then message will be displayed on the site (see error message below).
 
