@@ -97,10 +97,16 @@ button[disabled] {
   float: right;
 }
 
+#parametersUsed{
+  margin-top: 0;
+  text-align: center;
+}
+
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  color: black; /* Added for 03 JavaScript: Password Generator */
   border: none;
   display: block;
   width: 100%;
