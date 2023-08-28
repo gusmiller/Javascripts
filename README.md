@@ -22,6 +22,14 @@ The challenge this week is to create an application that enables employees to ge
 
 <img src="./Assets/img/PasswordGenerator.png" height="750">
 
+## Source code
+The source code is stored and maintained in Github; https://github.com/gusmiller/Javascripts. It includes additional documents that helped the development of te Password Genertor. The public repositry can be found here:
+
+```
+https://gusmiller.github.io/Javascripts/
+```
+The latest version is: Version 003
+
 ## Business Requirements
 The Password Generator should allow user to define some parameters that need to be taken into consideration. The JavaScript will take care to use selected parameters while creating the password. The prompts are as follow:
 
@@ -32,18 +40,18 @@ The Password Generator should allow user to define some parameters that need to 
 <li><strong>Allow <span style="color:yellow;">Uppercase</span> Characters</strong> - User to confirm whether or not to include uppercase characters.</li>
 <li><strong>Allow <span style="color:yellow;">Numeric</span> Characters</strong> - User to confirm whether or not to include numeric characters.</li>
 <li><strong>Validation</strong> - Process will validate password based on criteria selected. Error message will be displayed. This will normally happen when user does not confirms Special Characters.
-<li><strong>Error</strong> - Errors are prompted to the user. First t report the error and second tp ask if another attempt is required.</li>
+<li><strong>Error</strong> - Errors are prompted to the user, using the are in where the password should be displayed. Message is styled in red characters and bigger font.</li>
 </ul>
 
 ## Password Algorithm
-The password generation is processed by a simple algrithm that selects characters from a string. It uses the length of the string and it returns a random character.<br/> <span style="color:cyan">Note:</span> charcters is a global variable that contains all valid characters allowed to use.
+The password generation is processed by a simple algrithm, that selects characters from a working string (this string is built using the criteria used by the user). It uses the length of the string and it returns a random character.<br/> <span style="color:cyan">Note:</span> charcters is a global variable that contains all valid characters (based on criteria) allowed to use.
 
 ```
 characters.charAt(Math.floor(Math.random() * characters.length));
 ```
 
 ## Notes to consider
-The Password Generator uses an algorithm to select a character in the building process. This is done as many times as specified in the Password Length.
+The Password Generator uses an algorithm to select a single character in the building process. This is done as many times as specified in the Password Length.
 
 > **Note**: Parameters required in the process are as follo:
 >
